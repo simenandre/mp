@@ -7,5 +7,5 @@ Scripts for [microplane](https://github.com/Clever/microplane)
 This snipped assumes you're using [ghq](https://github.com/x-motemen/ghq).
 
 ```
-mp plan -b simenandre/renovate -m 'chore: move to renovate' -- deno run --allow-write ~/ghq/github.com/simenandre/mp/migrate-to-renovate.ts
+mp plan -b simenandre/renovate -m 'chore: move to renovate' -- deno run --allow-write https://esm.sh/gh/simenandre/mp/migrate-to-renovate.ts
 ```
