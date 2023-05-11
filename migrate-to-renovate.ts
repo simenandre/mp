@@ -1,6 +1,3 @@
-import { format } from "https://esm.sh/prettier@2.8.8";
-import { default as parserBabel } from "https://esm.sh/prettier@2.8.8/parser-babel";
-
 await Deno.mkdir("./.github").catch(() => {
   console.log("Folder .github already exists");
 });
@@ -19,12 +16,13 @@ const renovateConfig = {
   postUpdateOptions: ["yarnDedupeHighest"],
 };
 
-// const prettierConfig = await resolveConfig("./");
-
 await Deno.writeTextFile(
   "./.github/renovate.json",
-  format(JSON.stringify(renovateConfig), {
-    parser: "json",
-    plugins: [parserBabel],
-  })
+  JSON.stringify(renovateConfig, null, 2)
 );
+
+const command = new Deno.Command(Deno.execPath(), {
+  args: ["prettier", "--write", "./.github/renovate.json"],
+});
+
+await command.output();
