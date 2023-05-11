@@ -1,0 +1,9 @@
+{
+  "version": "2",
+  "remote": {
+    "https://esm.sh/sort-keys@5.0.0": "b3cf7525e4901d5810c6a9d74aba5349cc6110147e41d7a0276a7ca749f0d2a2",
+    "https://esm.sh/v120/is-plain-obj@4.1.0/deno/is-plain-obj.mjs": "477c367ad06d54a6539fb11b2d888a605a203700776633c31ea7c6363c04b50e",
+    "https://esm.sh/v120/sort-keys@5.0.0/deno/sort-keys.mjs": "6071424558530f6114ecf537494221b0c5b2f61585061ddf8002e8600c30da55",
+    "https://esm.sh/v120/sort-keys@5.0.0/index.d.ts": "d2cf3c9f6ff4ff0b0192de55e23df24caee03b18c1db449eb17be86ac326a8fa"
+  }
+}
