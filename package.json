@@ -1,7 +1,7 @@
 {
   "name": "hello-world",
   "devDependencies": {
-    "@bjerk/eslint-config": "^2.0.1",
+    "@bjerk/eslint-config": "^4.0.0",
     "@nestjs/common": "^9.0.3",
     "@nestjs/core": "^9.0.3",
     "@nestjs/platform-express": "^9.0.3",
