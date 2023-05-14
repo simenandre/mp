@@ -1,6 +1,10 @@
 import type { PackageJson } from "https://esm.sh/v120/types-package-json@2.0.39";
 
-const rawPkg = await Deno.readFile("./package.json");
+const rawPkg = await Deno.readFile("./package.json").catch(() => {
+  // If the file doesn't exist, we exit gracefully
+  console.log("No package.json found");
+  Deno.exit(0);
+});
 const pkg = JSON.parse(new TextDecoder().decode(rawPkg)) as PackageJson;
 
 const isRanged = (version: string) =>
