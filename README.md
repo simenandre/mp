@@ -61,3 +61,17 @@ To run it with `microplane`:
 ```shell
 mp plan -b simenandre/set-prettier -m 'chore: set prettier' -- deno run --allow-write --allow-read https://esm.sh/gh/simenandre/mp/set-prettier.ts
 ```
+
+## Migrate prettier
+
+A script that migrates prettier from `@cobraz/prettier` to `@simenandre/prettier`.
+
+```shell
+deno run --allow-write --allow-read https://esm.sh/gh/simenandre/mp/migrate-prettier.ts
+```
+
+To run it with `microplane`:
+
+```shell
+mp plan -b simenandre/migrate-prettier -m 'chore: migrate prettier' -- deno run --allow-write --allow-read https://esm.sh/gh/simenandre/mp/migrate-prettier.ts
+```
