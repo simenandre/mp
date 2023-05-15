@@ -12,7 +12,7 @@ const pkg = JSON.parse(new TextDecoder().decode(rawPkg)) as PackageJson & {
 const oldPackageName = "@cobraz/prettier";
 const newPackage = {
   name: "@simenandre/prettier",
-  version: "3.1.0",
+  version: "3.0.2",
 };
 
 // Replace in devDependencies
