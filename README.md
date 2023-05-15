@@ -75,3 +75,17 @@ To run it with `microplane`:
 ```shell
 mp plan -b simenandre/migrate-prettier -m 'chore: migrate prettier' -- deno run --allow-write --allow-read https://esm.sh/gh/simenandre/mp/migrate-prettier.ts
 ```
+
+## Update lockfile
+
+A script that updates the lockfile.
+
+```shell
+deno run --allow-write --allow-read https://esm.sh/gh/simenandre/mp/update-lockfile.ts
+```
+
+To run it with `microplane`:
+
+```shell
+mp plan -b simenandre/update-lockfile -m 'chore: update lockfile' -- deno run --allow-write --allow-read https://esm.sh/gh/simenandre/mp/update-lockfile.ts
+```
