@@ -1,0 +1,7 @@
+{
+  "name": "hello-world",
+  "dependencies": {
+    "express": "^4.16.4",
+    "@cobraz/prettier": "latest"
+  }
+}

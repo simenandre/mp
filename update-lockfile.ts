@@ -10,6 +10,7 @@ const pkg = JSON.parse(new TextDecoder().decode(rawPkg)) as PackageJson & {
 };
 
 if (pkg.packageManager) {
+  console.log("Found package manager in package.json");
   if (pkg.packageManager.includes("yarn")) {
     const command = new Deno.Command(Deno.execPath(), {
       args: ["yarn", "install"],
@@ -34,21 +35,27 @@ if (pkg.packageManager) {
 const yarnLock = await Deno.readFile("./yarn.lock").catch(() => false);
 
 if (yarnLock) {
-  const command = new Deno.Command(Deno.execPath(), {
-    args: ["yarn", "install"],
+  console.log("Found yarn.lock");
+  const command = new Deno.Command("yarn", {
+    args: ["install"],
   });
 
-  await command.output();
-  Deno.exit(0);
+  const output = await command.output();
+  Deno.stdout.write(output.stdout);
+  Deno.stderr.write(output.stderr);
+  Deno.exit(output.code);
 }
 
 const pnpmLock = await Deno.readFile("./pnpm-lock.yaml").catch(() => false);
 
 if (pnpmLock) {
-  const command = new Deno.Command(Deno.execPath(), {
-    args: ["pnpm", "install"],
+  console.log("Found pnpm-lock.yaml");
+  const command = new Deno.Command("pnpm", {
+    args: ["install"],
   });
 
-  await command.output();
-  Deno.exit(0);
+  const output = await command.output();
+  Deno.stdout.write(output.stdout);
+  Deno.stderr.write(output.stderr);
+  Deno.exit(output.code);
 }

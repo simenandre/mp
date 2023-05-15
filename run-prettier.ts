@@ -8,6 +8,8 @@ const rawPkg = await Deno.readFile("./package.json").catch(() => {
 
 const pkg = JSON.parse(new TextDecoder().decode(rawPkg)) as PackageJson;
 
+// TODO: Add support for installing dependencies first
+
 // if (pkg.scripts && pkg.scripts["format"]) {
 //   const command = new Deno.Command(Deno.execPath(), {
 //     args: ["npm", "run", "format"],
@@ -22,8 +24,8 @@ if (
   (pkg.devDependencies && pkg.devDependencies["prettier"]) ||
   (pkg.dependencies && pkg.dependencies["prettier"])
 ) {
-  const command = new Deno.Command(Deno.execPath(), {
-    args: ["prettier", "--write", "./"],
+  const command = new Deno.Command("prettier", {
+    args: ["--write", "./"],
   });
 
   await command.output();
