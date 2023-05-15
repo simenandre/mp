@@ -12,8 +12,8 @@ const pkg = JSON.parse(new TextDecoder().decode(rawPkg)) as PackageJson & {
 if (pkg.packageManager) {
   console.log("Found package manager in package.json");
   if (pkg.packageManager.includes("yarn")) {
-    const command = new Deno.Command(Deno.execPath(), {
-      args: ["yarn", "install"],
+    const command = new Deno.Command("yarn", {
+      args: ["install"],
     });
 
     await command.output();
@@ -21,8 +21,8 @@ if (pkg.packageManager) {
   }
 
   if (pkg.packageManager.includes("pnpm")) {
-    const command = new Deno.Command(Deno.execPath(), {
-      args: ["pnpm", "install"],
+    const command = new Deno.Command("pnpm", {
+      args: ["install"],
     });
 
     await command.output();
