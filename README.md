@@ -47,3 +47,17 @@ mp plan -b simenandre/replace-package -m 'chore: replace package' -- deno run --
 ```
 
 **Note**: You should probably update your lockfile as well!
+
+## Set prettier in package.json
+
+A script that sets prettier in package.json.
+
+```shell
+deno run --allow-write --allow-read https://esm.sh/gh/simenandre/mp/set-prettier.ts
+```
+
+To run it with `microplane`:
+
+```shell
+mp plan -b simenandre/set-prettier -m 'chore: set prettier' -- deno run --allow-write --allow-read https://esm.sh/gh/simenandre/mp/set-prettier.ts
+```
