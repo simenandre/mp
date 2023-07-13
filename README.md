@@ -92,3 +92,17 @@ To run it with `microplane`:
 ```shell
 mp plan -b simenandre/update-lockfile -m 'chore: update lockfile' -- deno run --allow-write --allow-read https://esm.sh/gh/simenandre/mp/update-lockfile.ts
 ```
+
+## Use .eslintrc.cjs
+
+A script that migrates to `.eslintrc.cjs`, using a standardized/opinionated eslint config.
+
+```shell
+deno run --allow-all https://esm.sh/gh/simenandre/mp/use-eslintrc.ts
+```
+
+To run it with `microplane`:
+
+```shell
+mp plan -b simenandre/use-eslintrc -m 'chore: use .eslintrc.cjs' -- deno run --allow-all https://esm.sh/gh/simenandre/mp/use-eslintrc.ts
+```
