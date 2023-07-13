@@ -18,6 +18,8 @@ const oldEslintFiles = await walk(".", {
   match: [globToRegExp(".eslintrc.*")],
 });
 
+await Deno.remove(".eslintrc").catch(() => {});
+
 for await (const file of oldEslintFiles) {
   await Deno.remove(file.path);
 }
