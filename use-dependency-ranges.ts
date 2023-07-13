@@ -32,4 +32,3 @@ await Deno.writeTextFile(
   "./package.json",
   JSON.stringify(pkg, null, 2) + "\n",
 );
-

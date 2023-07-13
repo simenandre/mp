@@ -4,7 +4,8 @@ Scripts for [microplane](https://github.com/Clever/microplane)
 
 ## Migrate to renovate
 
-A script that migrates a repository from [dependabot](https://dependabot.com/) to [renovate](https://renovatebot.com/).
+A script that migrates a repository from [dependabot](https://dependabot.com/)
+to [renovate](https://renovatebot.com/).
 
 ```shell
 deno run --allow-write https://esm.sh/gh/simenandre/mp/migrate-to-renovate.ts
@@ -18,7 +19,8 @@ mp plan -b simenandre/renovate -m 'chore: move to renovate' -- deno run --allow-
 
 ## Use dependency ranges
 
-A script that migrates a repository from using exact versions to using dependency ranges.
+A script that migrates a repository from using exact versions to using
+dependency ranges.
 
 ```shell
 deno run --allow-write --allow-read https://esm.sh/gh/simenandre/mp/use-dependency-ranges.ts
@@ -64,7 +66,8 @@ mp plan -b simenandre/set-prettier -m 'chore: set prettier' -- deno run --allow-
 
 ## Migrate prettier
 
-A script that migrates prettier from `@cobraz/prettier` to `@simenandre/prettier`.
+A script that migrates prettier from `@cobraz/prettier` to
+`@simenandre/prettier`.
 
 ```shell
 deno run --allow-write --allow-read https://esm.sh/gh/simenandre/mp/migrate-prettier.ts

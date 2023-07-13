@@ -18,7 +18,7 @@ const renovateConfig = {
 
 await Deno.writeTextFile(
   "./.github/renovate.json",
-  JSON.stringify(renovateConfig, null, 2)
+  JSON.stringify(renovateConfig, null, 2),
 );
 
 const command = new Deno.Command(Deno.execPath(), {

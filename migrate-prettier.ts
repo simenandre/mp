@@ -18,13 +18,13 @@ const newPackage = {
 // Replace in devDependencies
 if (!pkg.devDependencies || !pkg.devDependencies[oldPackageName]) {
   console.log(
-    `No ${oldPackageName} found in devDependencies, exiting gracefully`
+    `No ${oldPackageName} found in devDependencies, exiting gracefully`,
   );
   Deno.exit(0);
 }
 
 console.log(
-  `Replacing ${oldPackageName} with ${newPackage.name} in devDependencies`
+  `Replacing ${oldPackageName} with ${newPackage.name} in devDependencies`,
 );
 pkg.devDependencies[newPackage.name] = newPackage.version;
 delete pkg.devDependencies[oldPackageName];

@@ -16,16 +16,16 @@ if (!oldPackageName || !newPackage.name || !newPackage.version) {
     oldPackageName,
     newPackageName: newPackage.name,
     newPackageVersion: newPackage.version,
-  })
+  });
   throw new Error(
-    "Usage: deno run --allow-read --allow-write replace-package.ts <old-package-name> <new-package-name>@<version or scope>"
+    "Usage: deno run --allow-read --allow-write replace-package.ts <old-package-name> <new-package-name>@<version or scope>",
   );
 }
 
 // Replace in dependencies
 if (pkg.dependencies && pkg.dependencies[oldPackageName]) {
   console.log(
-    `Replacing ${oldPackageName} with ${newPackage.name} in dependencies`
+    `Replacing ${oldPackageName} with ${newPackage.name} in dependencies`,
   );
   pkg.dependencies[newPackage.name] = newPackage.version;
   delete pkg.dependencies[oldPackageName];
@@ -34,7 +34,7 @@ if (pkg.dependencies && pkg.dependencies[oldPackageName]) {
 // Replace in devDependencies
 if (pkg.devDependencies && pkg.devDependencies[oldPackageName]) {
   console.log(
-    `Replacing ${oldPackageName} with ${newPackage.name} in devDependencies`
+    `Replacing ${oldPackageName} with ${newPackage.name} in devDependencies`,
   );
   pkg.devDependencies[newPackage.name] = newPackage.version;
   delete pkg.devDependencies[oldPackageName];

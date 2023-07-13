@@ -11,7 +11,7 @@ const configName = Deno.args[0];
 
 if (!configName) {
   throw new Error(
-    "Usage: deno run --allow-read --allow-write set-prettier.ts <config-name>"
+    "Usage: deno run --allow-read --allow-write set-prettier.ts <config-name>",
   );
 }
 
