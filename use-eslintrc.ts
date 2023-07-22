@@ -24,7 +24,11 @@ for await (const file of oldEslintFiles) {
   await Deno.remove(file.path);
 }
 
-const eslintConfig = `module.exports = {
+const eslintConfig = `/**
+ * @type {import('eslint').Linter.Config}
+ **/
+
+module.exports = {
   extends: ['@bjerk/eslint-config'],
   parserOptions: {
     project: true,
