@@ -43,7 +43,7 @@ function isUsingBjerkEslintConfigV5(pkg: PackageJson): boolean {
     return false;
   }
 
-  return semver.satisfies(minVersion, "^5.3.1");
+  return semver.satisfies(minVersion, "^5");
 }
 
 const packageFiles = await walk(".", {
@@ -56,7 +56,7 @@ for await (const file of packageFiles) {
 
   if (!isUsingBjerkEslintConfigV5(pkg)) {
     console.log(
-      `${file.path}: Not using @bjerk/eslint-config within range (v5.3.1)`
+      `${file.path}: Not using @bjerk/eslint-config v5`
     );
     continue;
   }
