@@ -106,3 +106,17 @@ To run it with `microplane`:
 ```shell
 mp plan -b simenandre/use-eslintrc -m 'chore: use .eslintrc.cjs' -- deno run --allow-all https://esm.sh/gh/simenandre/mp/use-eslintrc.ts
 ```
+
+## Use @bjerk/eslint-config v5
+
+A script that migrates to `@bjerk/eslint-config` v5.
+
+```shell
+deno run --allow-all https://esm.sh/gh/simenandre/mp/use-bjerk-eslint-config-v5.ts
+```
+
+To run it with `microplane`:
+
+```shell
+mp plan -b simenandre/use-bjerk-eslint-config-v5 -m 'chore: use @bjerk/eslint-config v5' -- deno run --allow-all https://esm.sh/gh/simenandre/mp/use-bjerk-eslint-config-v5.ts
+```
